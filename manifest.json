@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Extension Tree",
+  "version": "1.0",
+  "description": "Show Parents of a selected element.",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
