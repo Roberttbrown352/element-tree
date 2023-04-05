@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Extension Tree Popup</title>
+    <link rel="stylesheet" href="dist/tailwind.css" />
   </head>
   <body>
-    <h1>Extension Tree</h1>
-    <p>
-      Right-click on an element and choose "Show Parents" to see its parent
-      elements in the console.
-    </p>
+    <div
+      id="elements-container"
+      class="w-60 bg-slate-800 p-6 text-slate-300"
+    ></div>
+    <hr class="border-slate-900" />
+    <div class="bg-slate-600 p-6">
+      <p id="css-selector" class="pb-6 text-slate-300"></p>
+
+      <div class="flex justify-center items-center w-full">
+        <button id="copy-button" class="bg-green-500 p-1 rounded-sm mx-auto">
+          Copy
+        </button>
+      </div>
+      <script src="popup.js"></script>
+    </div>
   </body>
 </html>
